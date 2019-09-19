@@ -1,0 +1,34 @@
+---
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: "replay/bus/summit"
+          binder: local_solace
+        input:
+          destination: "bus1024"
+          binder: local_solace
+      binders:
+        local_solace:
+          type: solace
+          environment:
+            solace:
+              java:
+                reconnectRetries: 3
+                connectRetries: 3
+                clientUsername: "heinz1"
+                connectRetriesPerHost: 0
+                msgVpn: "heinzvpn"
+                host: "localhost:55555"
+                clientPassword: "heinz1"
+          inheritEnvironment: true
+          defaultCandidate: true
+      solace:
+        bindings:
+          input:
+            consumer:
+              queueAdditionalSubscriptions: "geo/bus/1024/>"
+server:
+  port: 8095
+

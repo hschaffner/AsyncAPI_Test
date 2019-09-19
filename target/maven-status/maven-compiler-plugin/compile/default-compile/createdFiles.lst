@@ -1,0 +1,4 @@
+com/solace/spring/cloud/streams/test/types/BusGeoLocation.class
+com/solace/spring/cloud/streams/test/messages/BusLocationChange.class
+com/solace/spring/cloud/streams/test/types/BusGeoLocation$Status.class
+com/solace/spring/cloud/streams/test/SingaporeBusSimulatorApplication.class

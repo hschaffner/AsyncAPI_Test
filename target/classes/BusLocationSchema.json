@@ -1,0 +1,88 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "vehicleNum",
+    "routeNum",
+    "lat",
+    "lon",
+    "status",
+    "speed"
+  ],
+  "properties": {
+    "vehicleNum": {
+      "$id": "#/properties/vehicleNum",
+      "type": "integer",
+      "title": "The Vehiclenum Schema",
+      "default": 0,
+      "minimum": 0,
+      "maximum": 1000,
+      "examples": [
+        1091
+      ]
+    },
+    "routeNum": {
+      "$id": "#/properties/routeNum",
+      "type": "integer",
+      "title": "The Routenum Schema",
+      "default": 0,
+      "maximum": 2000,
+      "minimum": 0,
+      "examples": [
+        5
+      ]
+    },
+    "lat": {
+      "$id": "#/properties/lat",
+      "type": "number",
+      "title": "The Lat Schema",
+      "default": 0,
+      "maximum": 180,
+      "minimum": -180,
+      "examples": [
+        1.27281
+      ]
+    },
+    "lon": {
+      "$id": "#/properties/lon",
+      "type": "number",
+      "title": "The Lon Schema",
+      "default": 0,
+      "maximum": 180,
+      "minimum": -180,
+      "examples": [
+        103.85372
+      ]
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "enum": [
+        "OK",
+        "STOP",
+        "FAIL",
+        "START",
+        "STOPPED",
+        "FLAT_TIRE"
+      ],
+      "title": "The Status Schema",
+      "default": "OK",
+      "examples": [
+        "OK"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "speed": {
+      "$id": "#/properties/speed",
+      "type": "integer",
+      "title": "The Speed Schema",
+      "default": 0,
+      "examples": [
+        43
+      ]
+    }
+  }
+}

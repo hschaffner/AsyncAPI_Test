@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.solace.spring.cloud.streams.test.SingaporeBusSimulatorApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.45 s - in com.solace.spring.cloud.streams.test.SingaporeBusSimulatorApplicationTests
