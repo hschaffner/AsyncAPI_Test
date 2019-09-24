@@ -19,8 +19,8 @@ spring:
                 connectRetries: 3
                 clientUsername: "heinz1"
                 connectRetriesPerHost: 0
-                msgVpn: "heinzvpn"
-                host: "localhost:55555"
+                msgVpn: "heinzVPN"
+                host: "vmr90.heinz.org:55555"
                 clientPassword: "heinz1"
           inheritEnvironment: true
           defaultCandidate: true

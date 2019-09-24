@@ -66,7 +66,8 @@
         "FAIL",
         "START",
         "STOPPED",
-        "FLAT_TIRE"
+        "FLAT_TIRE",
+        "ENGINE_PROBLEM"
       ],
       "title": "The Status Schema",
       "default": "OK",

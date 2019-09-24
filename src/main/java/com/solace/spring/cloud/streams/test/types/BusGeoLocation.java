@@ -1,6 +1,7 @@
 package com.solace.spring.cloud.streams.test.types;
 
 public class BusGeoLocation {
+	@SuppressWarnings("unused")
 	private static final long serialVersionUID = 1L;
 	private java.lang.Integer vehicleNum;
 
