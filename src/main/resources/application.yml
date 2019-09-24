@@ -5,12 +5,12 @@ spring:
       bindings:
         output:
           destination: "replay/bus/summit"
-          binder: local_solace
+          binder: localsolace
         input:
           destination: "bus1024"
-          binder: local_solace
+          binder: localsolace
       binders:
-        local_solace:
+        localsolace:
           type: solace
           environment:
             solace:
