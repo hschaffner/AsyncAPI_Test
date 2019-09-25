@@ -55,18 +55,12 @@ public class SingaporeBusSimulatorApplication {
 		location.setSpeed(msg.getSpeed());
 		location.setStatus(msg.getStatus());
 		location.setVehicleNum(msg.getVehicleNum());
-		
-
-		//Need to convert serialized JSON String 
-		BusGeoSchemaSer schemaSer = new BusGeoSchemaSer();
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("schema", schemaSer.getBusSchemaSer());
-		JSONObject jo = new JSONObject(map);
-	
 
 		//Prepare JSON for "schema" portion of JSON message
+		BusGeoSchemaSer schemaSer = new BusGeoSchemaSer();
 		BusGeoSchema busSchema = new BusGeoSchema();
-		busSchema.setSchema(jo.getString("schema"));
+		busSchema.setSchema(schemaSer.getBusSchemaSer());
+		
 		
 		//Republish message for Kafka as JSON {"schema" : {}, "payload" : {} }
 		BusLocationChange changeOut = new BusLocationChange();
